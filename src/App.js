@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -9,14 +10,6 @@ function App() {
       <Footer />
     </div>
   );
-}
-
-const Footer = () => {
-  return (
-    <div>
-      <h4>Ini Footer</h4>
-    </div>
-  )
 }
 
 export default App;
