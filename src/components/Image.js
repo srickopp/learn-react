@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Image(){
+function Image(props){
     return(
         <div>
-            <img src=" https://s3-ap-southeast-1.amazonaws.com/niomic/img/sample/food1.jpg"
+            <img src={props.linkgambar}
             alt="gambar-makanan"
-            width="500"
+            width={props.lebar}
             />
         </div>
     )

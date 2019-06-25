@@ -8,7 +8,7 @@ function App() {
     <div>
       <Header />
         <List />        
-      <Footer />
+      <Footer namanya="Makanan Nusantara" tahun="2019"/>
     </div>
   );
 }
