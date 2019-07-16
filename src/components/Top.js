@@ -1,11 +1,12 @@
 import React from 'react';
 
 const Top = () =>{
-    function handlePesan(){
-        alert("Halaman Top Tampil")
+    function handlePesan(param, e){
+        e.preventDefault();
+        alert(param)
     }
     return(
-        <a href="/" onClick = {handlePesan}>
+        <a href="/" onClick = { (e) => handlePesan("Pesan Halaman Top", e)} >
             Halaman Top
         </a>
     )

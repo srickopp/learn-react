@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Header extends Component{
   constructor(props){
     super(props);
-    this.json = {
+    this.state = {
       coba: "Enak Sekali",
       data: this.props.list
 
@@ -11,8 +11,9 @@ class Header extends Component{
     this.handlePesan = this.handlePesan.bind(this);    
   }
 
-  handlePesan(){
-    alert(this.json.coba);
+  handlePesan(param, e){
+    e.preventDefault();
+    alert(param);
   }
 
 
@@ -20,9 +21,9 @@ class Header extends Component{
     return(
       <div>      
         <h2>Makanan Khas Indonesia coba </h2>
-        <p>{this.json.coba}</p>        
-        <p>{this.json.data}</p>
-        <a href="/" onClick={this.handlePesan}>Klik Disini</a>
+        <p>{this.state.coba}</p>        
+        <p>{this.state.data}</p>
+        <a href="/" onClick={e => this.handlePesan(this.state.data, e)}>Klik Disini</a>
       </div>
     );
   }
