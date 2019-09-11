@@ -6,16 +6,13 @@ class Main extends Component{
         this.state = {
             title: "Menu Makanan",
             title2: "Menu Minuman",
-            inputValue: "Nasi Padang Nusantara"
+            inputValue: "",
+            inputKota:'',
         }
 
         this.rubahData = this.rubahData.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
-
-    // rubahData(){
-    //     this.setState({title: "Pilih Makanan"});
-    // }
 
     rubahData(){
         this.setState((state,props) => {
@@ -26,9 +23,14 @@ class Main extends Component{
         })
     }
 
-    handleChange(e){
-    
-        console.log(e.target.value);
+    handleChange(state, e){
+        this.setState({ [state] : e.target.value});
+        // const eventTarget = e.target.value;
+        // this.setState((state, props) => {
+        //     return{
+        //         inputValue: eventTarget,                
+        //     }
+        // })
     }
 
     render(){
@@ -42,7 +44,16 @@ class Main extends Component{
                 <input
                     type="text" 
                     value={this.state.inputValue} 
-                    onChange={this.handleChange} 
+                    onChange={(e)=>this.handleChange("inputValue",e)}
+                    placeholder="Nama"
+                />
+                <br/>
+                <br/>
+                <input
+                    type="text"             
+                    value={this.state.inputKota}
+                    onChange={(e)=>this.handleChange("inputKota",e)}
+                    placeholder="Masukkan nama kota"
                 />
             </div>
         )
