@@ -33,9 +33,7 @@ class Header extends Component{
     })
   }
 
-  render(){
-    console.log("Jalan: Render");
-    console.log(this.state.statusRendering)
+  render(){    
       return(        
         <div>
           {this.state.statusRendering === true ? (
@@ -48,7 +46,7 @@ class Header extends Component{
               <h1>Selamat Tinggal</h1>
               <h2>Jangan lupa kembali</h2>
             </div>
-          )} 
+          )}           
           <button onClick={this.handleElement}>Change Value of Status Renderin</button>
         </div>
       )
