@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import menuMakanan from './lib/Food'
 
 class Main extends Component{
     constructor(props){
@@ -56,7 +57,7 @@ class Main extends Component{
                     onChange={(e)=>this.handleChange("inputKota",e)}
                     placeholder="Masukkan nama kota"
                 />                
-                {this.props.menuMakanan.map((value, index) => {                    
+                {menuMakanan.map((value, index) => {
                     return(
                         <div key={index} >
                             <p>No: {index + 1}</p>
